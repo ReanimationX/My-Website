@@ -14,7 +14,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
+                    <!-- <li><a href="#">Services</a></li> -->
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row">
             <div class="about-column1">
-                <img src="Images/IMG20231206103756.png">
+                <img src="Images/IMG_20240108_131910.jpg">
             </div>
             <div class="about-column2">
                 <h1 class="Sub-Title">About Me</h1>
@@ -39,10 +39,55 @@
                     cycling and reading manga. My favorite sport is basketball. My favorite foods are adobo, tinola, dinuguan, pinakbet and munggo.
                     My dream is to work at a high quality company where I can improve my ability and serve many people in the future.
                 </p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('talents')">Talents</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Academics</span><br>Hard Working</li>
+                        <li><span>Communication</span><br>Listening and Giving Advices</li>
+                        <li><span>Interpersonal</span><br>Patience, Positivity and Motivated</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>academics</span><br>Hard Working</li>
+                        <li><span>Communication</span><br>Listening and Giving Advices</li>
+                        <li><span>Interpersonal</span><br>Patience, Positivity and Motivated</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="talents">
+                    <ul>
+                        <li><span>AcAdeMiCs</span><br>Hard Working</li>
+                        <li><span>Communication</span><br>Listening and Giving Advices</li>
+                        <li><span>Interpersonal</span><br>Patience, Positivity and Motivated</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 
 </body>
 </html>
